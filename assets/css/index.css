@@ -1,0 +1,89 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+.c-top-nav {
+  margin: 10px 0px;
+}
+.c-bottom-nav {
+  background-color: #EF4C00 ;
+}
+.nav-wrapper {
+  padding: 0px 20px;
+}
+.c-herosection {
+  background-image:linear-gradient(#0000008c,#000000c7),url('../images/heroBanner.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
+.c-herosection-intro {
+  width: 35%;
+  padding: 3em 1em;
+}
+.c-herosection-intro h2 {
+  font-family: 'DM Serif Display', serif;;
+  margin: 0px;
+}
+.c-btn-signup {
+  background-color: #ff8a05;
+  margin: 0px !important;
+}
+.c-download {
+  margin: 20px 0px;
+}
+.c-meals-search-container {
+  width: 95%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.c-meals-menu {
+  padding: 15px 0px;
+  z-index: 1;
+}
+.pinned {
+  background-color: #dc6031;
+  width: 100%;
+}
+.c-meals-menu ul{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 95%;
+  margin: 0px auto;
+}
+.c-meals-menu ul li {
+  margin-right: 3em;
+}
+.c-meals-menu ul li:first-child{
+  background-color: #EF4C00;
+  padding: 10px 25px;
+  border-radius: 50px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.c-meals-menu ul li:not(:first-child) {
+  background-color: white;
+  color: grey;
+  padding: 10px 25px;
+  border-radius: 50px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.c-meal-container {
+  padding: 3em 2em;
+}
+.c-chip{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+.c-popular-meal {
+  width: 95%;
+  margin: 0px auto;
+}

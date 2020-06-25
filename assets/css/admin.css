@@ -1,0 +1,154 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+.c-top-nav {
+  margin: 10px 0px;
+}
+.c-bottom-nav {
+  background-color: #EF4C00 ;
+}
+.nav-wrapper {
+  padding: 0px 20px;
+}
+.sidenav.sidenav-fixed {
+  /* display: none !important; */
+}
+.c-sidenav {
+  background-color: #fff;
+  width: 25%;
+  height: 100vh;
+  border: 1px solid black;
+}
+.sidenav .user-view .circle {
+  width: 200px;
+  height: 150px;
+  margin: 0px auto;
+}
+.wrapper{
+  padding-left: 300px;
+}
+.c-logged-user {
+  display: flex;
+}
+main{
+  padding-left: 300px;
+}
+.c-meal-container {
+  padding: 3em 1em;
+}
+.c-chip{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+.card-content {
+  padding: 15px 12px !important;
+}
+.c-response {
+  padding: 15px 10px;
+  margin-bottom: 2em;
+  border-radius: 4px;
+  width: 100%;
+}
+.c-no-response {
+  display: none;
+}
+.c-success-response {
+  display: block !important;
+  background: green;
+}
+.c-error-response {
+  display: block !important;
+  background-color: red !important;
+}
+.c-input-field {
+  border-radius: .25rem;
+}
+form {
+  margin: 0px auto;
+}
+.c-input-field-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.c-input-group {
+  margin-bottom: 2em;
+}
+.c-input-group-top {
+  width: 48%;
+}
+.icon { 
+  padding: 17px; 
+  min-width: 40px; 
+} 
+.c-input-group input,
+.c-input-group input[type=file]{ 
+  width: 100%;
+  padding: 15px 12px;
+}
+.c-input-group input[type=file] {
+  padding: 15px 0px;
+}
+.c-input-group textarea{ 
+  height: 150px;
+  resize: none;
+  border: .9px solid grey;
+}
+.c-forgot-password {
+  margin-bottom: 10px;
+}
+.c-btn-signup {
+  width: 100%;
+}
+.c-meal-wrapper {
+  height: auto;
+  width: 50%;
+  padding: 20px 20px;
+  margin: 5em auto;
+  box-shadow: 0 0 4px 2px rgba(187, 196, 204, 0.18);
+}
+.c-meal-form-wrapper{
+  width: 100%;
+}
+.c-meal-wrapper img {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0px auto;
+  border-radius: 50%;
+  top: 50%;
+  left: 44%;
+  transform: translate(-50px, -50px);
+}
+.c-meal-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.c-btn-update,
+.c-btn-delete {
+  width: 100%;
+  margin-top: 1em;
+}
+.c-back {
+  display: block;
+  padding:1em 0 2em;
+}
+.c-order-wrapper {
+  padding: 0px 20px;
+}
+.btn-action{
+  width: 24%;
+}
+@media only screen and (min-width : 992px) {
+  .invesible-top {
+    /* top: 65px; */
+  }
+}
