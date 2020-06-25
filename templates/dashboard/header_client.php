@@ -1,4 +1,6 @@
 <?php 
+  error_reporting(E_ALL ^ E_NOTICE);
+
   session_start();
 
   $fullname = $_SESSION['fullname'];
@@ -9,8 +11,6 @@
   $error = array('message' => '');
   if (!isset($fullname)) {
     header("Location: auth/login.php");
-    $error['message'] = 'You need to be logged in';
-    $_SESSION['message'] = $error['message'];
   }
 ?>
 
@@ -53,7 +53,7 @@
     <li><div class="divider"></div></li>
     <li><a href="#!"><i class="material-icons">settings</i>Settings</a></li>
     <li><div class="divider"></div></li>
-    <li><a class="c-sidenav-link grey-text text-darken-5" href="./profile.php"><i class="material-icons">account_circle</i>Profile</a></li>
+    <li><a class="c-sidenav-link grey-text text-darken-5" href="./profile.php?update=profile"><i class="material-icons">account_circle</i>Profile</a></li>
     <li><a class="c-sidenav-link grey-text text-darken-5" href="#!"><i class="material-icons">help</i>Help</a></li>
     <li name="logout"><a class="c-sidenav-link grey-text text-darken-5" href="logout.php"><i class="material-icons">arrow_back</i>Logout</a></li>
   </ul>

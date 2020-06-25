@@ -1,7 +1,9 @@
 <?php
   error_reporting(E_ALL ^ E_NOTICE);
   session_start();
-  include('config/db.php');
+
+  include('../config/db.php');
+
 
   $user_fullname = '';
   $user_email = '';
@@ -24,7 +26,6 @@
       $user_email = $user['email'];
       $user_phoneNumber = $user['phone_number'];
       $user_homeAddress = $user['home_address'];
-      // print_r($phoneNumber);
     }else{
       echo mysqli_error($conn);
     }
@@ -75,7 +76,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <?php include('templates/dashboard/header_client.php') ?>
+  <?php include('../templates/dashboard/header_admin.php') ?>
   <main>
     <h2 class="center-align">Profile</h2>
     <section class="c-signup-container">
@@ -106,5 +107,5 @@
       </form>
     </section>
   </main>
-  <?php include('templates/footer.php'); ?>
+  <?php include('../templates/footer.php') ?>
 </html>

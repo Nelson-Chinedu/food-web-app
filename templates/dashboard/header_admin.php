@@ -1,17 +1,19 @@
 <?php 
-  // session_start();
+  error_reporting(E_ALL ^ E_NOTICE);
 
-  // $fullname = $_SESSION['fullname'];
-  // $email = $_SESSION['email'];
-  // $phoneNumber = $_SESSION['phoneNumber'];
-  // $homeAddress = $_SESSION['homeAddress'];
+  session_start();
 
-  // $error = array('message' => '');
-  // if (!isset($fullname)) {
-  //   header("Location: auth/login.php");
-  //   $error['message'] = 'You need to be logged in';
-  //   $_SESSION['message'] = $error['message'];
-  // }
+  $fullname = $_SESSION['fullname'];
+  $email = $_SESSION['email'];
+  $phoneNumber = $_SESSION['phoneNumber'];
+  $homeAddress = $_SESSION['homeAddress'];
+
+  $error = array('message' => '');
+  if (!isset($fullname)) {
+    header("Location: ../auth/login.php");
+    // $error['message'] = 'You need to be logged in';
+    // $_SESSION['message'] = $error['message'];
+  }
 ?>
 
 <head>
@@ -32,7 +34,7 @@
       <a href="#!" class="brand-logo">Foodie Fresh</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><span class="c-logged-user">Welcome <?php  ?></span></li>
+        <li><span class="c-logged-user">Welcome Admin</span></li>
       </ul>
     </div>
   </nav>
@@ -40,8 +42,8 @@
   <ul id="mobile-demo" class="sidenav sidenav-fixed invesible-top">
     <li><div class="user-view">
       <a href="#user"><img class="circle" src="../assets/images/avatar.png" alt="profile-image"></a>
-      <a href="#name"><span class="black-text center-align name"><?php  ?></span></a>
-      <a href="#email"><span class="black-text center-align email"><?php  ?></span></a>
+      <a href="#name"><span class="black-text center-align name"><?php echo $fullname ?></span></a>
+      <a href="#email"><span class="black-text center-align email"><?php echo $email ?></span></a>
     </div></li>
     <li><div class="divider"></div></li>
     <li><a href="#!" class="text-lighten-4"><i class="material-icons">dashboard</i>Main Menu</a></li>
@@ -53,7 +55,7 @@
     <li><div class="divider"></div></li>
     <li><a href="#!"><i class="material-icons">settings</i>Settings</a></li>
     <li><div class="divider"></div></li>
-    <li><a class="c-sidenav-link grey-text text-darken-5" href="./profile.php"><i class="material-icons">account_circle</i>Profile</a></li>
+    <li><a class="c-sidenav-link grey-text text-darken-5" href="../admin/profile.php?update=profile"><i class="material-icons">account_circle</i>Profile</a></li>
     <li><a class="c-sidenav-link grey-text text-darken-5" href="#!"><i class="material-icons">help</i>Help</a></li>
     <li name="logout"><a class="c-sidenav-link grey-text text-darken-5" href="../logout.php"><i class="material-icons">arrow_back</i>Logout</a></li>
   </ul>
