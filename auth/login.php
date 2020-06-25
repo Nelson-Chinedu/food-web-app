@@ -1,5 +1,7 @@
 <?php
   include('../config/db.php');
+  
+  error_reporting(E_ALL ^ E_NOTICE);
   session_start();
 
   $email = '';
@@ -8,10 +10,7 @@
   $errors = array('email' => '', 'password' => '');
   $response = array('message' => '');
 
-  if ($_SESSION['message']) {
-    $response['message'] = $_SESSION['message'];
-  }
-  
+
 if (isset($_POST['login'])) {
   $email = $_POST['email'];
   $password = $_POST['password'];
@@ -42,7 +41,14 @@ if (isset($_POST['login'])) {
       $_SESSION['email'] = $user['email'];
       $_SESSION['phoneNumber'] = $user['phone_number'];
       $_SESSION['homeAddress'] = $user['home_address'];
-      header("Location: ../dashboard.php");
+
+      if ($user['role'] === 'client'){
+        header("Location: ../dashboard.php");
+      }else if ($user['role'] === 'admin' || $user['role'] === 'super'){
+         header("Location: ../admin/dashboard.php"); 
+      } else {
+        header("Location: ../login.php");
+      }
       $email = '';
       $password = '';
     } else {
@@ -52,7 +58,7 @@ if (isset($_POST['login'])) {
     mysqli_close($conn);
   }
 }
-
+mysqli_error($conn);
 ?>
 
 <!DOCTYPE html>

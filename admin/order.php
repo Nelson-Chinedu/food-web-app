@@ -1,6 +1,5 @@
 <?php
-// error_reporting(E_ALL ^ E_NOTICE);
-// session_start();
+error_reporting(E_ALL ^ E_NOTICE);
 
 include('../config/db.php');
 
@@ -23,26 +22,26 @@ $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
           <th>Meal Name</th>
           <th>Meal Price</th>
           <th>Date</th>
-          <th colspan="2">Action</th>
+          <th colspan="2">Status</th>
         </tr>
       </thead>
       <tbody>
-      <?php foreach($user as $userOrder) { ?>
-            <tr>
-              <td><?php echo $userOrder['meal_name'] ?></td>
-              <td><?php echo $userOrder['price'] ?></td>
-              <td><?php echo $userOrder['created_at'] ?></td>
-              <td class="btn-action"><a class="btn lighten-2"><i class="material-icons left">check_circle</i>Request Order</a></td>
-              <td class="btn-action"><a href="order.php?action=cancel&id=<?php echo $userOrder['id']?>" class="btn red lighten-2"><i class="material-icons left">cancel</i>Cancel Order</a></td>
-            </tr>
-            <?php } ?>  
-          </tbody>  
-        </table>
-      <?php } else { ?>
-          <h5 class="center-align"><?php echo 'No Order Found' ?></h5>
-      <?php } ?>
-      </tbody>
+        <?php foreach($user as $userOrder) { ?>
+        <?php if($userOrder['meal_status'] === 'pending'){ ?>
+          <?php $mealStatus = 'Unverified'; ?>
+        <?php } ?>
+          <tr>
+            <td><?php echo $userOrder['meal_name'] ?></td>
+            <td><?php echo $userOrder['price'] ?></td>
+            <td><?php echo $userOrder['created_at'] ?></td>
+            <td><?php echo $mealStatus ?></td>
+          </tr>
+        <?php } ?>  
+      </tbody>  
     </table>
+    <?php } else { ?>
+      <h5 class="center-align"><?php echo 'No Order Found' ?></h5>
+    <?php } ?>
     </section>
   </main>
   <?php include('../templates/footer.php'); ?>

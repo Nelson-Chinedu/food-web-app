@@ -57,7 +57,7 @@
           </tbody>  
         </table>
       <?php } else { ?>
-          <h5 class="center-align"><?php echo 'No Record Found' ?></h5>
+          <h5 class="center-align"><?php echo 'No Order(s) Found' ?></h5>
       <?php } ?>
       </tbody>
     </table>

@@ -1,9 +1,12 @@
 <?php
+  error_reporting(E_ALL ^ E_NOTICE);
+
   include('../config/db.php');
 
   $fullname = '';
   $email = '';
   $password = '';
+  $role = '';
 
   $errors = array('fullname' => '', 'email' => '', 'password' => '');
   $response = array('message' => '');
@@ -33,8 +36,9 @@
       $email = mysqli_real_escape_string($conn, $email);
       $password = mysqli_real_escape_string($conn, $password);
       $hashed_password = md5($password);
+      $role = 'client';
 
-      $sql = "INSERT INTO accounts(fullname, email, password) VALUES('$fullname', '$email', '$hashed_password')";
+      $sql = "INSERT INTO accounts(fullname, email, password, role) VALUES('$fullname', '$email', '$hashed_password', '$role')";
 
       $result = mysqli_query($conn, $sql);
       if ($result) {
@@ -45,7 +49,7 @@
       } else {
         $response['message'] =  mysqli_error($conn);
       }
-      mysqli_free_result($result);
+      // mysqli_free_result($result);
       mysqli_close($conn);
     }
   }

@@ -147,6 +147,36 @@ form {
 .btn-action{
   width: 24%;
 }
+.c-input-field {
+  padding: 10px;
+  border-radius: .25rem;
+}
+form {
+  width: 60%;
+  margin: 0px auto;
+}
+.c-input-field-group {
+  display: flex;
+  justify-content: space-between;
+  width: 99%;
+}
+.c-input-field-group input {
+  width: 95%;
+}
+.c-input-group {
+  width: 100%;
+  margin-bottom: 2em;
+}
+.c-input-group input,
+.c-input-group textarea{ 
+  width: 98%;
+  padding: 15px 12px;
+}
+.c-input-group textarea{ 
+  height: 150px;
+  resize: none;
+  border: .9px solid grey;
+}
 @media only screen and (min-width : 992px) {
   .invesible-top {
     /* top: 65px; */
