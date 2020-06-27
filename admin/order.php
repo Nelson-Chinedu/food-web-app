@@ -13,7 +13,7 @@ $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <html lang="en">
 <?php include('../templates/dashboard/header_admin.php') ?>
   <main>
-  <h4 class="center-align">Order(s)</h4>   
+  <h4 class="center-align c-order-intro">Order(s)</h4>   
     <section class="c-order-wrapper">
     <?php if($user) { ?>
     <table class="striped responsive">
@@ -44,5 +44,5 @@ $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <?php } ?>
     </section>
   </main>
-  <?php include('../templates/footer.php'); ?>
+  <?php include('../templates/admin-footer.php'); ?>
 </html>

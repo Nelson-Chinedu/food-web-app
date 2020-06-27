@@ -15,7 +15,7 @@
 <html lang="en">
   <?php include('templates/dashboard/header_client.php') ?>
   <main>
-    <h4 class="center-align">History</h4>
+    <h4 class="center-align c-history-intro">History</h4>
     <section class="c-order-wrapper">
       <?php if($user) { ?>
         <table class="responsive striped">
@@ -41,5 +41,5 @@
       <?php } ?>  
     </section>
   </main>
-  <?php include('templates/footer.php'); ?>
+  <?php include('templates/client-footer.php'); ?>
 </html>

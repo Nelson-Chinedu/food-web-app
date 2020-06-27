@@ -57,7 +57,7 @@ if (isset($_POST['order'])){
 <html lang="en">
   <?php include('templates/dashboard/header_client.php') ?>
   <main>
-    <h4 class="center-align">View Meal</h4>
+    <h4 class="center-align c-viewMeal-intro">View Meal</h4>
     <section class="c-meal-wrapper">
       <form method="POST" action="view-meal.php?action=view&id=<?php echo $id ?>" class="c-meal-form-wrapper">  
         <img src="assets/images/food-1.jpg" alt="meal image">
@@ -77,5 +77,5 @@ if (isset($_POST['order'])){
       </form>
     </section>
   </main>
-  <?php include('templates/footer.php'); ?>
+  <?php include('templates/client-footer.php'); ?>
 </html>

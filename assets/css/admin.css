@@ -3,8 +3,10 @@
   padding: 0px;
   box-sizing: border-box;
 }
-html, body {
-  height: 100%;
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .c-top-nav {
   margin: 10px 0px;
@@ -14,9 +16,6 @@ html, body {
 }
 .nav-wrapper {
   padding: 0px 20px;
-}
-.sidenav.sidenav-fixed {
-  /* display: none !important; */
 }
 .c-sidenav {
   background-color: #fff;
@@ -37,6 +36,10 @@ html, body {
 }
 main{
   padding-left: 300px;
+  margin-bottom: 5em;
+}
+.card-image img{
+  height: 300px;
 }
 .c-meal-container {
   padding: 3em 1em;
@@ -61,7 +64,7 @@ main{
 }
 .c-success-response {
   display: block !important;
-  background: green;
+  background: #26a69a;
 }
 .c-error-response {
   display: block !important;
@@ -99,7 +102,7 @@ form {
 .c-input-group textarea{ 
   height: 150px;
   resize: none;
-  border: .9px solid grey;
+  border: 1px solid rgba(0,0,0,.2);
 }
 .c-forgot-password {
   margin-bottom: 10px;
@@ -111,7 +114,7 @@ form {
   height: auto;
   width: 50%;
   padding: 20px 20px;
-  margin: 5em auto;
+  margin: 0em auto;
   box-shadow: 0 0 4px 2px rgba(187, 196, 204, 0.18);
 }
 .c-meal-form-wrapper{
@@ -172,13 +175,57 @@ form {
   width: 98%;
   padding: 15px 12px;
 }
+.c-input-group input[type=text],
+.c-input-group input[type=email],
+.c-input-group textarea {
+  border: 1px solid rgba(0,0,0,.2);
+
+}
 .c-input-group textarea{ 
   height: 150px;
   resize: none;
   border: .9px solid grey;
 }
-@media only screen and (min-width : 992px) {
-  .invesible-top {
-    /* top: 65px; */
+.c-meal-intro,
+.c-order-intro,
+.c-profile-intro{
+  margin-top: 2em;
+}
+footer {
+  margin-top: auto;
+  padding-left: 300px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #e9e9e99c;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-left: 0px;
+  }
+  .nav-wrapper {
+    padding: 0px;
+  }
+  .wrapper{
+    padding-left: 0px;
+  }
+  .card-image img{
+    height: 200px;
+  }
+  .c-meal-wrapper {
+    width: 90%;
+  }
+  form{
+    width: 95%;
+  }
+  .c-input-field-group {
+    flex-direction: column;
+  }
+  .c-meal-wrapper {
+    padding: 0px;
+  }
+  footer{
+    padding-left: 0px;
   }
 }

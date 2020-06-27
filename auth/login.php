@@ -47,7 +47,7 @@ if (isset($_POST['login'])) {
       }else if ($user['role'] === 'admin' || $user['role'] === 'super'){
          header("Location: ../admin/dashboard.php"); 
       } else {
-        header("Location: ../login.php");
+        header("Location: ../auth/login.php");
       }
       $email = '';
       $password = '';
@@ -58,7 +58,6 @@ if (isset($_POST['login'])) {
     mysqli_close($conn);
   }
 }
-mysqli_error($conn);
 ?>
 
 <!DOCTYPE html>
@@ -71,10 +70,11 @@ mysqli_error($conn);
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/login.css">
-  <title>Document</title>
+  <title>Fresh Foodie</title>
 </head>
 <body>
-  <main>
+  <main class="c-login-wrapper">
+    <h4 class="center-align"><a href="../index.php">Fresh Foodie</a></h4>
     <section class="c-login-container">
       <form action="login.php" method="POST">
         <?php if ($response['message']) { ?>
@@ -101,12 +101,10 @@ mysqli_error($conn);
           </div>
         </div>
         <div class="c-signup-optional">
-          <p>Don't have an account?</p>
-          <a href="signup.php">Sign Up</a>
+          <p class="center-align">Don't have an account? <a href="signup.php">Sign Up</a></p>
         </div>
       </form>
     </section>
   </main>
   
- <?php include('../templates/footer.php') ?>
 </html>

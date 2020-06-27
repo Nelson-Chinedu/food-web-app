@@ -72,5 +72,5 @@ if(isset($_POST['delete'])) {
       </form>
     </section>
   </main>
-  <?php include('../templates/footer.php') ?>
+  <?php include('../templates/admin-footer.php') ?>
 </html>

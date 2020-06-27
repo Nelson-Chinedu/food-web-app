@@ -20,14 +20,13 @@
   $result = mysqli_query($conn, $sql);
   $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
   
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
   <?php include('templates/dashboard/header_client.php') ?>
   <main>
-    <h4 class="center-align">Order(s)</h4>
+    <h4 class="center-align c-order-intro">Order(s)</h4>
     <?php if (!$user) { ?>
       <p class="center-align red-text"><?php echo $response['message'] = '' ?></p>
     <?php } else { ?>
@@ -63,5 +62,5 @@
     </table>
     </section>
   </main>
-  <?php include('templates/footer.php'); ?>
+  <?php include('templates/client-footer.php'); ?>
 </html>

@@ -19,7 +19,7 @@ $meals = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <?php if ($meals){ ?>
           <?php foreach($meals as $meal) { ?>
             <a href="view-meal.php?action=view&id=<?php echo $meal['id']?>">
-              <div class="col s12 m4 l4">
+              <div class="col s12 m4 l4 c-meal-card">
                 <div class="card">
                   <div class="card-image">
                     <img src="assets/uploads/<?php echo $meal['meal_image'] ?>" alt="Photo of meal">
@@ -46,5 +46,5 @@ $meals = mysqli_fetch_all($result, MYSQLI_ASSOC);
     </div>
   </section>
   </main>
-  <?php include('templates/footer.php') ?>
+  <?php include('templates/client-footer.php') ?>
 </html>

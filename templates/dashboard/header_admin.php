@@ -24,14 +24,14 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/admin.css">
-  <title>Foodie Fresh</title>
+  <title>Fresh Foodie</title>
 </head>
 <body>
 <header>
   <div class="wrapper">
   <nav class="z-depth-0">
     <div class="nav-wrapper c-bottom-nav">
-      <a href="#!" class="brand-logo">Foodie Fresh</a>
+      <a href="#!" class="brand-logo">Fresh Foodie</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><span class="c-logged-user">Welcome Admin</span></li>
