@@ -51,7 +51,9 @@ form {
 .c-btn-login {
   width: 100%;
 }
-
+.c-login-optional {
+  padding: 20px 0px;
+}
 @media (max-width: 768px) {
   .c-login-container {
     width: 90%;

@@ -100,7 +100,7 @@ if (isset($_POST['login'])) {
             <button type="submit" name="login" class="btn btn-large c-btn-login z-depth-0">Login</button>
           </div>
         </div>
-        <div class="c-signup-optional">
+        <div class="c-login-optional">
           <p class="center-align">Don't have an account? <a href="signup.php">Sign Up</a></p>
         </div>
       </form>

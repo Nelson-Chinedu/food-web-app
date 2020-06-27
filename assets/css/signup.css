@@ -58,6 +58,9 @@ form {
 .c-btn-signup {
   width: 100%;
 }
+.c-signup-optional {
+  padding: 20px 0px;
+}
 
 @media (max-width: 768px) {
   .c-signup-container {
