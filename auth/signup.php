@@ -66,13 +66,13 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/signup.css">
-  <title>Document</title>
+  <title>Fresh Foodie</title>
 </head>
 <body>
-  <main>
+  <main class="c-signup-wrapper">
+    <h4 class="center-align"><a href="../index.php">Fresh Foodie</a></h4>
     <section class="c-signup-container">
       <form action="signup.php" method="POST">
-        
         <?php if (!$response['message']) { ?>
           <div class="c-no-response"></div>
         <?php } else if ($response['message'] === 'Account Created Successfully. Please Login'){ ?>
@@ -108,12 +108,10 @@
           </div>
         </div>
         <div class="c-signup-optional">
-          <p>Already have an account?</p>
-          <a href="login.php">Login</a>
+          <p class="center-align">Already have an account? <a href="login.php">Login</a></p>
         </div>
       </form>
     </section>
   </main>
   
- <?php include('../templates/footer.php') ?>
 </html>

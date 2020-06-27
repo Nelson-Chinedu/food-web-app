@@ -40,11 +40,11 @@ $meals = mysqli_fetch_all($result, MYSQLI_ASSOC);
               </a>
             <?php } ?>
           <?php } else{ ?>
-            <h5 class="center-align"><?php echo "No Meals Found" ?></h5>
+            <h5 class="center-align"><?php echo "No Meals Added" ?></h5>
           <?php } ?>
         </div>
       </div>  
     </section>
   </main>
-  <?php include('../templates/footer.php') ?>
+  <?php include('../templates/admin-footer.php') ?>
 </html>

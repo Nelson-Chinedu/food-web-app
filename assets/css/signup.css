@@ -1,7 +1,15 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.c-signup-wrapper {
+  margin: 5em 0;
+}
 .c-signup-container {
   width: 35%;
-  padding: 20px 10px;
-  margin: 5em auto;
+  padding: 10px 10px;
+  margin: 3em auto;
   background-color: #fff;
   box-shadow: 0 0 4px 2px rgba(38,153,251,.18);
 }
@@ -42,6 +50,7 @@ form {
 .c-input-group input{ 
   width: 100%;
   padding: 15px 45px;
+  border: 1px solid rgba(0,0,0,.2);
 }
 .c-forgot-password {
   margin-bottom: 10px;
@@ -50,7 +59,12 @@ form {
   width: 100%;
 }
 .c-signup-optional {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 20px 0px;
+}
+
+@media (max-width: 768px) {
+  .c-signup-container {
+    width: 90%;
+    padding: 0px;
+  }
 }

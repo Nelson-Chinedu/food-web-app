@@ -78,7 +78,7 @@
 <html lang="en">
   <?php include('../templates/dashboard/header_admin.php') ?>
   <main>
-    <h2 class="center-align">Profile</h2>
+    <h4 class="center-align c-profile-intro">Profile</h4>
     <section class="c-signup-container">
     <form action="profile.php" method="POST">
         <div class="c-input-field">
@@ -107,5 +107,5 @@
       </form>
     </section>
   </main>
-  <?php include('../templates/footer.php') ?>
+  <?php include('../templates/admin-footer.php') ?>
 </html>

@@ -3,8 +3,10 @@
   padding: 0px;
   box-sizing: border-box;
 }
-html, body {
-  height: 100%;
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .c-top-nav {
   margin: 10px 0px;
@@ -23,33 +25,37 @@ html, body {
   min-height: 400px;
 }
 .c-herosection-intro {
-  width: 35%;
+  width: 50%;
   padding: 3em 1em;
 }
 .c-herosection-intro h2 {
+  font-size: 5rem;
   font-family: 'DM Serif Display', serif;;
   margin: 0px;
 }
 .c-btn-signup {
-  background-color: #ff8a05;
-  margin: 0px !important;
+  background-color: #FA9500;
 }
-.c-download {
+.c-getStarted {
   margin: 20px 0px;
+}
+.c-btn-getStarted {
+  background-color:#FA9500 !important ;
 }
 .c-meals-search-container {
   width: 95%;
   margin: 0px auto;
-  display: flex;
-  justify-content: space-between;
 }
 .c-meals-menu {
   padding: 15px 0px;
   z-index: 1;
 }
 .pinned {
-  background-color: #dc6031;
+  background-color: #EF4C00;
   width: 100%;
+}
+.card-image img{
+  height: 300px;
 }
 .c-meals-menu ul{
   display: flex;
@@ -62,7 +68,7 @@ html, body {
   margin-right: 3em;
 }
 .c-meals-menu ul li:first-child{
-  background-color: #EF4C00;
+  background-color: #adacabd1;
   padding: 10px 25px;
   border-radius: 50px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
@@ -86,4 +92,44 @@ html, body {
 .c-popular-meal {
   width: 95%;
   margin: 0px auto;
+}
+footer {
+  margin-top: auto;
+  background-color: #EF4C00 !important;
+}
+
+@media (max-width: 768px) {
+  .c-meals-menu{
+    display: none;
+  }
+  nav .brand-logo {
+    font-size: 2em;
+  }
+  .nav-wrapper {
+    padding: 0px;
+  }
+  .card-image img{
+    height: 200px;
+  }
+  .c-btn-signup {
+    width: 50%;
+    text-align: left;
+  }
+  .c-herosection {
+    min-height: auto;
+  }
+  .c-herosection-intro {
+    width: 90%;
+  }
+  .c-herosection-intro h2 {
+    font-size: 2.56rem;
+  }
+  .c-meals-search-container,
+  .c-popular-meal {
+    width: 90%;
+    margin: 3em auto 0em;
+  }
+  .c-meal-container {
+    padding: 3em 1em;
+  }
 }

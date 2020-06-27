@@ -64,8 +64,6 @@ if (isset($_POST['addMeal'])) {
   } else {
     $errors['imageType'] = 'Images only';
   }
-
-
 }
 
 ?>
@@ -74,7 +72,7 @@ if (isset($_POST['addMeal'])) {
 <html lang="en">
 <?php include('../templates/dashboard/header_admin.php') ?>
   <main>
-    <h4 class="center-align">Add Meal</h4>
+    <h4 class="center-align c-meal-intro">Add Meal</h4>
     <section class="c-meal-wrapper">
     <form action="meal.php" method="POST" class="c-meal-form-wrapper" enctype="multipart/form-data">
     <?php if (!$response['message']) { ?>
@@ -119,5 +117,5 @@ if (isset($_POST['addMeal'])) {
       </form>
     </section>
   </main>
-  <?php include('../templates/footer.php'); ?>
+  <?php include('../templates/admin-footer.php'); ?>
 </html>
