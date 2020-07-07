@@ -12,7 +12,7 @@ body{
   margin: 10px 0px;
 }
 .c-bottom-nav {
-  background-color: #EF4C00 ;
+  background-color: #E31B0E;
 }
 .nav-wrapper {
   padding: 0px 20px;
@@ -22,40 +22,67 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 400px;
+  min-height: 500px;
 }
 .c-herosection-intro {
   width: 50%;
-  padding: 3em 1em;
+  padding: 5em 1em;
 }
 .c-herosection-intro h2 {
-  font-size: 5rem;
-  font-family: 'DM Serif Display', serif;;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  font-style: normal;
+  line-height: 1.4em;
+  letter-spacing: 1px;
   margin: 0px;
 }
 .c-btn-signup {
-  background-color: #FA9500;
+  text-transform: capitalize;
+  color: #000;
+  background-color: #FFD800;
+}
+.c-btn-signup:hover,
+.c-btn-getStarted:hover {
+  background-color: #ffd800cf !important;
 }
 .c-getStarted {
   margin: 20px 0px;
 }
 .c-btn-getStarted {
-  background-color:#FA9500 !important ;
+  color: #000;
+  background-color:#FFD800 !important ;
 }
-.c-meals-search-container {
-  width: 95%;
+.c-main-meal-wrapper {
+  width: 99%;
   margin: 0px auto;
+}
+.c-meal-title,
+.c-popular-meal-title {
+  position: relative;
+  background-image: linear-gradient(#FFD800 , #FFD800);
+  background-position: 9px 90%;
+  background-repeat: no-repeat;
+  background-size: 99% .3em;
+  padding-left: 7px;
+  margin: 2em 0em 1em;
+}
+.c-meal-title {
+  width: 16%;
+}
+.c-popular-meal-title {
+  width: 13%;
 }
 .c-meals-menu {
   padding: 15px 0px;
   z-index: 1;
 }
 .pinned {
-  background-color: #EF4C00;
+  background-color: #E31B0E;
   width: 100%;
 }
 .card-image img{
-  height: 300px;
+  height: 200px;
 }
 .c-meals-menu ul{
   display: flex;
@@ -80,8 +107,8 @@ body{
   border-radius: 50px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
 }
-.c-meal-container {
-  padding: 3em 2em;
+.c-meal-card-wrapper {
+  width: 300px;
 }
 .c-chip{
   display: flex;
@@ -90,12 +117,28 @@ body{
   margin-top: 2em;
 }
 .c-popular-meal {
-  width: 95%;
-  margin: 0px auto;
+  width: 99%;
+  margin-bottom: 10em;
+}
+.c-popular-meal h4,
+.c-meal-title {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
 }
 footer {
   margin-top: auto;
-  background-color: #EF4C00 !important;
+  background-color: #E31B0E !important;
+}
+.c-page-footer-container {
+  width: 95%;
+  margin: 0px auto;
+}
+.c-footer-text {
+  color: #FFD800;
+  text-decoration: underline;
+}
+.c-footer-text:hover {
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

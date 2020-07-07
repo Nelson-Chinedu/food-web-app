@@ -79,7 +79,7 @@ if (isset($_POST['login'])) {
       <form action="login.php" method="POST">
         <?php if ($response['message']) { ?>
           <div class="c-error-response">
-              <p class="center-align"><?php echo $response['message'] ?></p>
+              <p class="center-align white-text"><?php echo $response['message'] ?></p>
           </div>
           <?php } ?>
         <div class="c-input-field">

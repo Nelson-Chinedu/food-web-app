@@ -57,7 +57,6 @@ if (isset($_POST['addMeal'])) {
         }else{
           $response['message'] = mysqli_error($conn);
         }
-        // mysqli_free_result($result);
         mysqli_close($conn);
       }
 
@@ -79,7 +78,7 @@ if (isset($_POST['addMeal'])) {
           <div class="c-no-response"></div>
         <?php } else if ($response['message'] === 'Meal Added Successfully'){ ?>
         <div class="c-response c-success-response">
-            <p class="center-align"><?php echo $response['message'] ?></p>
+            <p class="center-align white-text"><?php echo $response['message'] ?></p>
         </div>
         <?php } else { ?>
           <div class="c-response c-error-response">
@@ -89,25 +88,20 @@ if (isset($_POST['addMeal'])) {
         <div class="c-input-field">
           <div class="c-input-field-group">
           <div class="c-input-group c-input-group-top">
-            <!-- <i class="fas fa-user icon"></i> -->
             <input type="text" class="browser-default" name="mealName" id="" value="<?php echo htmlspecialchars($mealName) ?>" placeholder="Enter Meal Name">
             <p class="red-text"><?php echo $errors['mealName'] ?></p>
           </div>
           <div class="c-input-group c-input-group-top">
-            <!-- <i class="fas fa-envelope icon"></i> -->
             <input type="text" class="browser-default" name="mealPrice" id="" value="<?php echo htmlspecialchars($mealPrice) ?>" placeholder="Enter Meal Price">
             <p class="red-text"><?php echo $errors['mealPrice'] ?></p>
           </div>
           </div>
           <div class="c-input-group">
-            <!-- <i class="fas fa-envelope icon"></i> -->
             <input type="text" class="browser-default" name="mealTime" id="" value="<?php echo htmlspecialchars($mealTime) ?>" placeholder="Enter Meal Time">
             <p class="red-text"><?php echo $errors['mealTime'] ?></p>
           </div>
           <div class="c-input-group">
-            <!-- <i class="fas fa-lock icon"></i> -->
             <input type="file" name="file" id="">
-            <!-- <input type="password" class="browser-default" name="password" id="password" value="<?php ?>" placeholder="Enter Password"> -->
             <p class="red-text"><?php echo $errors['imageType']  ?></p>
           </div>
           <div class="button-group">

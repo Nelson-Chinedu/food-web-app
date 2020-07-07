@@ -38,8 +38,11 @@ main{
   padding-left: 300px;
   margin-bottom: 5em;
 }
+.card {
+  height: auto;
+}
 .card-image img{
-  height: 300px;
+  height: 200px;
 }
 .c-meal-container {
   padding: 3em 1em;
@@ -78,6 +81,14 @@ form {
 }
 .c-input-field-group {
   display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.c-input-field-group input{
+  width: 100%;
+}
+.c-input-field-group-profile {
+  display: flex;
   justify-content: space-between;
   width: 100%;
 }
@@ -85,12 +96,25 @@ form {
   margin-bottom: 2em;
 }
 .c-input-group-top {
-  width: 48%;
+  width: 48% !important;
+}
+.c-input-field-profile-top{
+  width: 48% !important;
 }
 .icon { 
   padding: 17px; 
   min-width: 40px; 
 } 
+
+.c-input-field-profile-top{
+  padding: 15px 0px;
+}
+.c-input-field-profile-top input{
+  padding: 15px 12px;
+  width: 100%;
+}
+
+
 .c-input-group input,
 .c-input-group input[type=file]{ 
   width: 100%;
@@ -151,7 +175,7 @@ form {
   width: 24%;
 }
 .c-input-field {
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: .25rem;
 }
 form {
@@ -161,7 +185,7 @@ form {
 .c-input-field-group {
   display: flex;
   justify-content: space-between;
-  width: 99%;
+  width: 100%;
 }
 .c-input-field-group input {
   width: 95%;
@@ -172,7 +196,7 @@ form {
 }
 .c-input-group input,
 .c-input-group textarea{ 
-  width: 98%;
+  width: 100%;
   padding: 15px 12px;
 }
 .c-input-group input[type=text],

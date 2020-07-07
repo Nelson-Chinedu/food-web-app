@@ -13,21 +13,12 @@ $meals = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <html lang="en">
 
 <?php include('templates/header.php') ?>
-  <main>
+  <main class="c-main-meal-wrapper">
     <section>
       <div class="c-meals-search-container">
         <div class="c-meals-nav">
-          <h4 class="red-text">OUR MEALS</h4>
+          <h4 class="black-text c-meal-title">OUR MEALS</h4>
         </div>
-      </div>
-      <div class="c-meals-menu pushpin-demo-nav">
-        <ul class="">
-          <li class="c-all-menu"><a class="white-text" href="#">All (170)</a></li>
-          <li><a class="black-text" href="#">Break Fast (23)</a></li>
-          <li><a class="black-text" href="#">Launch (41)</a></li>
-          <li><a class="black-text" href="#">Drinks (53)</a></li>
-          <li><a class="black-text" href="#">Deserts (170)</a></li>
-        </ul>
       </div>
     </section>
     <section>
@@ -36,8 +27,8 @@ $meals = mysqli_fetch_all($result, MYSQLI_ASSOC);
           <?php if ($meals){ ?>
             <?php foreach($meals as $meal) { ?>
               <a href="auth/login.php">
-                <div class="col s12 m4 l4">
-                  <div class="card">
+                <div class="col s12 m3 l3">
+                  <div class="card c-meal-card-wrapper">
                     <div class="card-image">
                       <img src="assets/uploads/<?php echo $meal['meal_image'] ?>" alt="Photo of meal">
                     </div>
@@ -60,17 +51,20 @@ $meals = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <h5 class="center-align"><?php echo "No Meals Added. Please Check Back Later" ?></h5>
           <?php } ?>  
         </div>
+        <div class="row center-align">
+          <a href="#" class="btn btn-large c-btn-load-more">Load More Meals</a>
+        </div>
       </div>
     </section>
     <section>
       <div class="c-popular-meal">
-        <h4 class="red-text">POPULAR</h4>
+        <h4 class="black-text c-popular-meal-title">POPULAR</h4>
         <div class="row">
           <?php if ($meals){ ?>
             <?php foreach($meals as $meal) { ?>
               <a href="auth/login.php">
-                <div class="col s12 m4 l4">
-                  <div class="card">
+                <div class="col s12 m3 l3">
+                  <div class="card c-meal-card-wrapper">
                     <div class="card-image">
                       <img src="assets/uploads/<?php echo $meal['meal_image'] ?>" alt="Photo of meal">
                     </div>

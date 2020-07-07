@@ -82,12 +82,12 @@
     <section class="c-signup-container">
     <form action="profile.php" method="POST">
         <div class="c-input-field">
-          <div class="c-input-field-group">
-          <div class="c-input-group">
+          <div class="c-input-field-group-profile">
+          <div class="c-input-field-profile-top">
             <input type="text" class="browser-default" name="fullname" id="" value="<?php echo htmlspecialchars($user_fullname) ?>" placeholder="Enter Fullname">
             <p class="red-text"><?php echo $errors['fullname'] ?></p>
           </div>
-          <div class="c-input-group">
+          <div class=" c-input-field-profile-top">
             <input type="text" class="browser-default" name="email" id="" value="<?php echo htmlspecialchars($user_email) ?>" placeholder="Enter Email Address">
             <p class="red-text"><?php echo $errors['email'] ?></p>
           </div>
