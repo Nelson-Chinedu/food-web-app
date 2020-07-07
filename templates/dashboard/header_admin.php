@@ -11,8 +11,6 @@
   $error = array('message' => '');
   if (!isset($fullname)) {
     header("Location: ../auth/login.php");
-    // $error['message'] = 'You need to be logged in';
-    // $_SESSION['message'] = $error['message'];
   }
 ?>
 

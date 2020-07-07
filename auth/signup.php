@@ -77,7 +77,7 @@
           <div class="c-no-response"></div>
         <?php } else if ($response['message'] === 'Account Created Successfully. Please Login'){ ?>
         <div class="c-response c-success-response">
-            <p class="center-align"><?php echo $response['message'] ?></p>
+            <p class="center-align white-text"><?php echo $response['message'] ?></p>
         </div>
         <?php } else { ?>
           <div class="c-response c-error-response">

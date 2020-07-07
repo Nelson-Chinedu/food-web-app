@@ -38,8 +38,11 @@ main{
   padding-left: 300px;
   margin-bottom: 5em;
 }
+.card {
+  height: auto;
+}
 .card-image img{
-  height: 300px;
+  height: 200px;
 }
 .c-meal-container {
   padding: 3em 1em;

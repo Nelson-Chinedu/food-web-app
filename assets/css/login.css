@@ -23,10 +23,11 @@ form {
 }
 .c-error-response {
   display: block !important;
-  padding: 2px 10px;
+  padding: 10px 10px;
   margin-bottom: 10px;
   border-radius: 4px;
-  background-color: red !important;
+  color: #fff;
+  background-color: #E31B0E !important;
 }
 .c-input-group {
   margin-bottom: 2em;
