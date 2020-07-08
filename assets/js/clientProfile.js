@@ -1,7 +1,7 @@
 let fullnameErrorMessage = document.querySelector('#fullnameErrorMessage');
 let emailErrorMessage = document.querySelector('#emailErrorMessage');
-let passwordErrorMessage = document.querySelector('#passwordErrorMessage');
-let signupForm = document.querySelector('#signupForm')
+let phoneErrorMessage = document.querySelector('#phoneErrorMessage');
+let addressErrorMessage = document.querySelector('#addressErrorMessage');
 
 const fullnameErrorHandler = () => {
   fullnameErrorMessage.textContent = ''
@@ -11,6 +11,10 @@ const emailErrorHandler = () => {
   emailErrorMessage.textContent = ''
 };
 
-const passwordErrorHandler = () => {
-  passwordErrorMessage.textContent = ''
-}
+const phoneErrorHandler = () => {
+  phoneErrorMessage.textContent = ''
+};
+
+const addressErrorHandler = () => {
+  addressErrorMessage.textContent = ''
+};

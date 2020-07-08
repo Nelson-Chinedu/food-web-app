@@ -79,7 +79,7 @@
   <main class="c-signup-wrapper">
     <h4 class="center-align"><a href="../index.php">Fresh Foodie</a></h4>
     <section class="c-signup-container">
-      <form action="signup.php" method="POST">
+      <form action="signup.php" method="POST" id="signupForm">
         <?php if (!$response['message']) { ?>
           <div class="c-no-response"></div>
         <?php } else if ($response['message'] === 'Account Created Successfully. Please Login'){ ?>
@@ -94,18 +94,18 @@
         <div class="c-input-field">
           <div class="c-input-group">
             <i class="fas fa-user icon"></i>
-            <input type="text" class="browser-default" name="fullname" id="fullnamee" value="<?php echo $fullname ?>" placeholder="Enter Fullname">
-            <p class="red-text"><?php echo $errors['fullname']; ?></p>
+            <input type="text" class="browser-default" name="fullname" id="fullname" onkeyup="fullnameErrorHandler()" value="<?php echo $fullname ?>" placeholder="Enter Fullname">
+            <p class="red-text" id="fullnameErrorMessage"><?php echo $errors['fullname']; ?></p>
           </div>
           <div class="c-input-group">
             <i class="fas fa-envelope icon"></i>
-            <input type="text" class="browser-default" name="email" id="email" value="<?php echo $email ?>" placeholder="Enter Email Address">
-            <p class="red-text"><?php echo $errors['email'] ?></p>
+            <input type="text" class="browser-default" name="email" id="email" onkeyup="emailErrorHandler()" value="<?php echo $email ?>" placeholder="Enter Email Address">
+            <p class="red-text" id="emailErrorMessage"><?php echo $errors['email'] ?></p>
           </div>
           <div class="c-input-group">
             <i class="fas fa-lock icon"></i>
-            <input type="password" class="browser-default" name="password" id="password" value="<?php echo $password ?>" placeholder="Enter Password">
-            <p class="red-text"><?php echo $errors['password'] ?></p>
+            <input type="password" class="browser-default" name="password" id="password" onkeyup="passwordErrorHandler()" value="<?php echo $password ?>" placeholder="Enter Password">
+            <p class="red-text" id="passwordErrorMessage"><?php echo $errors['password'] ?></p>
           </div>
           <div class="c-forgot-password">
             <a href="">Forgot Password</a>
@@ -120,5 +120,5 @@
       </form>
     </section>
   </main>
-  
+  <script src="../assets/js/signup.js"></script>
 </html>

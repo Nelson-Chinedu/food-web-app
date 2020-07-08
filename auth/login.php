@@ -85,13 +85,13 @@ if (isset($_POST['login'])) {
         <div class="c-input-field">
           <div class="c-input-group">
             <i class="fas fa-envelope icon"></i>
-            <input type="text" class="browser-default" name="email" id="email" value="<?php echo $email ?>" placeholder="Enter Email Address">
-            <p class="red-text"><?php echo $errors['email'] ?></p>
+            <input type="text" class="browser-default" name="email" id="email" onkeyup="emailErrorHandler()" value="<?php echo $email ?>" placeholder="Enter Email Address">
+            <p class="red-text" id="emailErrorMessage"><?php echo $errors['email'] ?></p>
           </div>
           <div class="c-input-group">
             <i class="fas fa-lock icon"></i>
-            <input type="password" class="browser-default" name="password" id="password" value="<?php echo $password ?>" placeholder="Enter Password">
-            <p class="red-text"><?php echo $errors['password'] ?></p>
+            <input type="password" class="browser-default" name="password" id="password" onkeyup="passwordErrorHandler()" value="<?php echo $password ?>" placeholder="Enter Password">
+            <p class="red-text" id="emailErrorMessage"><?php echo $errors['password'] ?></p>
           </div>
           <div class="c-forgot-password">
             <a href="">Forgot Password</a>
@@ -106,5 +106,5 @@ if (isset($_POST['login'])) {
       </form>
     </section>
   </main>
-  
+  <script src="../assets/js/login.js"></script>
 </html>
