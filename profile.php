@@ -39,16 +39,18 @@
     $user_homeAddress = $_POST['homeAddress'];
 
     if(empty($user_fullname)) {
-      $errors['fullname'] = 'Required'; 
+      $errors['fullname'] = 'Required*'; 
     }
     if(empty($user_email)) {
-      $errors['email'] = 'Required'; 
+      $errors['email'] = 'Required*'; 
+    }elseif (!filter_var($user_email, FILTER_VALIDATE_EMAIL)){
+      $errors['email'] = 'Enter a valid email address';
     }
     if(empty($user_phoneNumber)) {
-      $errors['phoneNumber'] = 'Required';
+      $errors['phoneNumber'] = 'Required*';
     }
     if(empty($user_homeAddress)) {
-      $errors['homeAddress'] = 'Required';
+      $errors['homeAddress'] = 'Required*';
     }
 
     if(!array_filter($errors)) {
@@ -83,21 +85,21 @@
         <div class="c-input-field">
           <div class="c-input-field-group">
           <div class="c-input-group">
-            <input type="text" class="browser-default" name="fullname" id="" value="<?php echo htmlspecialchars($user_fullname) ?>" placeholder="Enter Fullname">
-            <p class="red-text"><?php echo $errors['fullname'] ?></p>
+            <input type="text" class="browser-default" name="fullname" id="" onkeyup="fullnameErrorHandler()" value="<?php echo htmlspecialchars($user_fullname) ?>" placeholder="Enter Fullname">
+            <p class="red-text" id="fullnameErrorMessage"><?php echo $errors['fullname'] ?></p>
           </div>
           <div class="c-input-group">
-            <input type="text" class="browser-default" name="email" id="" value="<?php echo htmlspecialchars($user_email) ?>" placeholder="Enter Email Address">
-            <p class="red-text"><?php echo $errors['email'] ?></p>
+            <input type="text" class="browser-default" name="email" id="" onkeyup="emailErrorHandler()" value="<?php echo htmlspecialchars($user_email) ?>" placeholder="Enter Email Address">
+            <p class="red-text" id="emailErrorMessage"><?php echo $errors['email'] ?></p>
           </div>
           </div>
           <div class="c-input-group">
-            <input type="text" class="browser-default" name="phoneNumber" id="" value="<?php echo htmlspecialchars($user_phoneNumber) ?>" placeholder="Enter Phone Number">
-            <p class="red-text"><?php echo $errors['phoneNumber'] ?></p>
+            <input type="text" class="browser-default" name="phoneNumber" id="" onkeyup="phoneErrorHandler()" value="<?php echo htmlspecialchars($user_phoneNumber) ?>" placeholder="Enter Phone Number">
+            <p class="red-text" id="phoneErrorMessage"><?php echo $errors['phoneNumber'] ?></p>
           </div>
           <div class="c-input-group">
-            <textarea class="browser-default" name="homeAddress" id="" placeholder="Enter Home Address"><?php echo htmlspecialchars($user_homeAddress) ?></textarea>
-            <p class="red-text"><?php echo $errors['homeAddress'] ?></p>
+            <textarea class="browser-default" name="homeAddress" id="" onkeyup="addressErrorHandler()" placeholder="Enter Home Address"><?php echo htmlspecialchars($user_homeAddress) ?></textarea>
+            <p class="red-text" id="addressErrorMessage"><?php echo $errors['homeAddress'] ?></p>
           </div>
           <div class="button-group">
             <button type="submit" name="save" class="btn btn-large c-btn-signup z-depth-0">Save</button>
@@ -107,4 +109,5 @@
     </section>
   </main>
   <?php include('templates/client-footer.php'); ?>
+  <script src="assets/js/clientProfile.js"></script>
 </html>

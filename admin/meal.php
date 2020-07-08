@@ -88,17 +88,17 @@ if (isset($_POST['addMeal'])) {
         <div class="c-input-field">
           <div class="c-input-field-group">
           <div class="c-input-group c-input-group-top">
-            <input type="text" class="browser-default" name="mealName" id="" value="<?php echo htmlspecialchars($mealName) ?>" placeholder="Enter Meal Name">
-            <p class="red-text"><?php echo $errors['mealName'] ?></p>
+            <input type="text" class="browser-default" name="mealName" id="" onkeyup="mealNameErrorHandler()" value="<?php echo htmlspecialchars($mealName) ?>" placeholder="Enter Meal Name">
+            <p class="red-text" id="mealNameErrorMessage"><?php echo $errors['mealName'] ?></p>
           </div>
           <div class="c-input-group c-input-group-top">
-            <input type="text" class="browser-default" name="mealPrice" id="" value="<?php echo htmlspecialchars($mealPrice) ?>" placeholder="Enter Meal Price">
-            <p class="red-text"><?php echo $errors['mealPrice'] ?></p>
+            <input type="text" class="browser-default" name="mealPrice" id="" onkeyup="mealPriceErrorHandler()" value="<?php echo htmlspecialchars($mealPrice) ?>" placeholder="Enter Meal Price">
+            <p class="red-text" id="mealPriceErrorMessage"><?php echo $errors['mealPrice'] ?></p>
           </div>
           </div>
           <div class="c-input-group">
-            <input type="text" class="browser-default" name="mealTime" id="" value="<?php echo htmlspecialchars($mealTime) ?>" placeholder="Enter Meal Time">
-            <p class="red-text"><?php echo $errors['mealTime'] ?></p>
+            <input type="text" class="browser-default" name="mealTime" id="" onkeyup="mealTimeErrorHandler()" value="<?php echo htmlspecialchars($mealTime) ?>" placeholder="Enter Meal Time">
+            <p class="red-text" id="mealTimeErrorMessage"><?php echo $errors['mealTime'] ?></p>
           </div>
           <div class="c-input-group">
             <input type="file" name="file" id="">
@@ -112,4 +112,5 @@ if (isset($_POST['addMeal'])) {
     </section>
   </main>
   <?php include('../templates/admin-footer.php'); ?>
+  <script src="../assets/js/addMeal.js"></script>
 </html>
