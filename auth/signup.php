@@ -38,18 +38,25 @@
       $hashed_password = md5($password);
       $role = 'client';
 
-      $sql = "INSERT INTO accounts(fullname, email, password, role) VALUES('$fullname', '$email', '$hashed_password', '$role')";
-
+      $sql = "SELECT email FROM accounts WHERE email = '$email'";
       $result = mysqli_query($conn, $sql);
-      if ($result) {
-        $response['message'] = 'Account Created Successfully. Please Login';
-        $fullname = '';
-        $email = '';
-        $password = '';
+      $count = mysqli_num_rows($result);
+
+      if ($count > 0) {
+        $errors['email'] = 'Email already exist';
       } else {
-        $response['message'] =  mysqli_error($conn);
+        $sql = "INSERT INTO accounts(fullname, email, password, role) VALUES('$fullname', '$email', '$hashed_password', '$role')";
+
+        $result = mysqli_query($conn, $sql);
+        if ($result) {
+          $response['message'] = 'Account Created Successfully. Please Login';
+          $fullname = '';
+          $email = '';
+          $password = '';
+      } else {
+          $response['message'] =  mysqli_error($conn);
+        }  
       }
-      // mysqli_free_result($result);
       mysqli_close($conn);
     }
   }
