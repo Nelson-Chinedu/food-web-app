@@ -68,7 +68,7 @@ body{
   margin: 2em 0em 1em;
 }
 .c-meal-title {
-  width: 16%;
+  width: 16.1%;
 }
 .c-popular-meal-title {
   width: 13%;
@@ -174,5 +174,8 @@ footer {
   }
   .c-meal-container {
     padding: 3em 1em;
+  }
+  .c-meal-title {
+    width: 17%;
   }
 }
